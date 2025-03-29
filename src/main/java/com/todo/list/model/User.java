@@ -3,6 +3,7 @@ package com.todo.list.model;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Getter
 @Setter
@@ -28,4 +29,6 @@ public class User implements Serializable {
 
     @NonNull
     private String password;
+
+    private List<Category> category;
 }

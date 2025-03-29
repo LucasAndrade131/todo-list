@@ -1,8 +1,15 @@
 package com.todo.list.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Task implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -20,4 +27,8 @@ public class Task implements Serializable {
     private LocalDateTime updatedAt;
 
     private Integer categoryId;
+
+    private LocalDateTime startDate;
+
+    private LocalDateTime endDate;
 }

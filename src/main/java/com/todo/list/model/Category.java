@@ -3,6 +3,7 @@ package com.todo.list.model;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Getter
 @Setter
@@ -17,5 +18,7 @@ public class Category implements Serializable {
     private String name;
 
     private String description;
+    private User user;
+    private List<Task> tasks;
 }
 
