@@ -34,11 +34,11 @@ public class UserDTO {
         user.setUserName(UserDTO.getUserName());
         user.setEmail(UserDTO.getEmail());
 
-        user.setCategory(UserDTO.getCategory() != null
-                ? UserDTO.getCategory().stream()
-                .map(CategoryDTO::toEntity)
-                .collect(Collectors.toList())
-                : Collections.emptyList());
+//        user.setCategory(UserDTO.getCategory() != null
+//                ? UserDTO.getCategory().stream()
+//                .map(CategoryDTO::toEntity)
+//                .collect(Collectors.toList())
+//                : Collections.emptyList());
 
         return user;
     }
@@ -53,11 +53,11 @@ public class UserDTO {
                 .lastName(user.getLastName())
                 .email(user.getEmail())
                 .userName(user.getUserName())
-                .category(user.getCategory() != null
-                        ? user.getCategory().stream()
-                        .map(CategoryDTO::fromEntity)
-                        .collect(Collectors.toList())
-                        : Collections.emptyList())
+//                .category(user.getCategory() != null
+//                        ? user.getCategory().stream()
+//                        .map(CategoryDTO::fromEntity)
+//                        .collect(Collectors.toList())
+//                        : Collections.emptyList())
                 .build();
     }
 }

@@ -20,31 +20,4 @@ public class CategoryDTO {
         this.id = id;
     }
 
-
-    public static Category toEntity(CategoryDTO categoryDTO) {
-        Category category = new Category();
-
-        category.setUser(UserDTO.toEntity(categoryDTO.getUser()));
-        category.setId(categoryDTO.getId());
-        category.setName(categoryDTO.getName());
-        category.setDescription(categoryDTO.getDescription());
-
-        return category;
-    }
-
-    public static CategoryDTO fromEntity(Category category) {
-        return CategoryDTO.builder()
-                .id(category.getId())
-                .name(category.getName())
-                .description(category.getDescription())
-                .tasks(
-                        category.getTasks() != null
-                                ? category.getTasks().stream()
-                                .map(TaskDTO::fromEntity)
-                                .toList()
-                                : null
-                )
-                .build();
-    }
-
 }
